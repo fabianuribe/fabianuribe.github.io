@@ -2,7 +2,8 @@
 layout: post
 title: "So you want to migrate a large MySQL database ..."
 date: 2013-04-01 17:45:12
-categories: en codeblog
+category: Development
+tags: [Development, MySQL]
 ---
 
 You found yourself again working late on a Sunday and this time you have to move that giant MySQL database to another server and the first thing you noticed is that phpMyAdmin won't be able to handle such a huge import, Classic.
@@ -10,7 +11,7 @@ You found yourself again working late on a Sunday and this time you have to move
 Well then Google no more, we are going to solve this so fast you will be back in your bed before your neighbor finishes brushing his ridiculous white teeth. Heads up for all you graphic-interface-fans we are doing this "the old school way", like when you only saw a cursor flashing on your black screen, so if you are not used to work inside the command line and you are like:
 
 <div class="quote">
-"Oh man... I don't know, that dark screen scares me, everytime I open it something goes wrong, I still get goose bumps when someone mentions it and later I have nightmares about it. My therapist told me to stay away from it."
+"Oh man... I don't know, that dark screen scares me, every time I open it something goes wrong, I still get goose bumps when someone mentions it and later I have nightmares about it. My therapist told me to stay away from it."
 <br>
 <div class="quote-author">You, being a chicken.</div>
 </div>
