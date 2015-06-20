@@ -77,13 +77,15 @@ ul.posts span {
 .site {
   font-size: 115%;
   text-align: justify;
-  width: 42em;
+  max-width: 42em;
   margin: 3em auto 2em;
-  /*line-height: 1.5em;*/
+  padding: 0 20px;
 }
 
 .header {
   font-family: 'Noto Sans', sans-serif
+  max-width: 30em;
+  margin: 0 auto;
 }
 
 .site .header a {
@@ -119,11 +121,11 @@ ul.posts span {
 }
 
 .site .footer {
-  font-size: 80%;
   color: #666;
   border-top: 4px solid #eee;
-  margin-top: 2em;
   overflow: hidden;
+  max-width: 30em;
+  margin: 2em auto;
 }
 
 .site .footer .contact {
@@ -232,7 +234,7 @@ ul.posts span {
 /* standard */
 
 .quicktip {
-  width: 30em;
+  max-width: 30em;
   margin: 0 auto 40px auto;
 }
 
@@ -245,7 +247,7 @@ ul.posts span {
 
 .quicktip pre {
   border: 1px solid #ddd;
-  background-color: #eef;
+  background-color: #f9f9f9;
   padding: 1em .4em;
 }
 
@@ -255,7 +257,6 @@ ul.posts span {
 
 .quicktip code {
   border: 1px solid #ddd;
-  background-color: #eef;
   padding: 0 .2em;
 }
 
