@@ -65,7 +65,16 @@ ul.posts span {
   color: #aaa;
   margin-right: 20px;
   /*font-family: Monaco, "Courier New", monospace;*/
-  font-size: 80%;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 552px) {
+    .posts .post-element {
+        padding-top: 20px;
+    }
+    .post-element .date {
+        display: block;
+    }
 }
 
 /*****************************************************************************/
