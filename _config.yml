@@ -1,5 +1,5 @@
 name: Fabián Uribe
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 permalink: none
 redcarpet:
