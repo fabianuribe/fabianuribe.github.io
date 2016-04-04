@@ -77,7 +77,7 @@ tags: [Web-Development, CSS, HTML]
     #spec li span:last-of-type{
         opacity: .5;
     }
-    #conclusion {
+    #result {
         border: 1px dashed #AAA;
         border-radius: 5px;
         font-family: "Noto Sans",sans-serif;
@@ -86,19 +86,19 @@ tags: [Web-Development, CSS, HTML]
         padding: 14px 0;
         width: 80%;
     }
-    #conclusion li {
+    #result li {
         display: table-cell;
         text-align: center;
     }
-    #conclusion img {
+    #result img {
         display: block;
         margin: auto;
     }
-    #conclusion span{
+    #result span{
         display: inline-block;
         padding: 0 4px;
     }
-    #conclusion li span:last-of-type{
+    #result li span:last-of-type{
         opacity: .5;
     }
 </style>
@@ -635,7 +635,7 @@ no CSS changes are required whatsoever.
 - If the container gets too small the elements will not overlap with each other maintaining readability.
 - Browser support is high enough to render the intended design without adding overhead to the compliant browsers.
 
-<ul id="conclusion">
+<ul id="result">
     <li>
         <span>Mon</span>
         <img src="/assets/svgs/storms.svg" width="60" height="60" alt="storms"/>
@@ -682,7 +682,7 @@ span{
 
 <div class="code-type-label">HTML</div>
 {% highlight html %}
-<ul id="conclusion">
+<ul>
     <li>
         <span>Mon</span>
         <img src="/assets/svgs/storms.svg"
