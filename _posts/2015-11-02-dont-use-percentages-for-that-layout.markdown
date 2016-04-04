@@ -96,7 +96,7 @@ Think for a second how you would structure the design above. Among the first thi
 
 Stop. Don't do it. Take a deep breath and think about that colleague (the one you like) or even your future self, you want to be kind to them right? Then don't make things complicated when they don't need to be.
 
-The worst CSS, is the one you don't have to write, and this includes any styles you don't explicitly need to set, like widths in this case.
+The worst CSS you can add, is the one you didn't even need to write. This includes any styles you don't explicitly have to set, like widths in this case.
 
 Products change, new features will be added (or dropped), new trends will change the icons, products will be translated to verbose languages, and please don't forget about A/B testing. This is why the fewer constraints we have in the layout, the easier will be to embrace changes.
 
@@ -635,7 +635,7 @@ ul {
     display: table;
     margin: auto;
     padding: 14px 0;
-    width: 80%;
+    width: 85%;
 }
 li {
     display: table-cell;
