@@ -32,50 +32,13 @@ tags: [Web-Development, CSS, HTML]
     .sample.overflows {
         width: 156px;
     }
-    .shape {
-        border-radius: 4px;
-        color: #fff;
-        height: 150px;
-        line-height: 150px;
-        text-align: center;
-        font-size: 45px;
-    }
-    .sample-a .shape {
-        max-width: 150px;
-        background-color: #1BB2FC;
-    }
-    .sample-b .shape {
-        max-width: 250px;
-        background-color: #3E9ECE;
-    }
-    .sample-c .shape {
-        max-width: 100px;
-        background-color: #A2E0FF;
-    }
-
     #spec {
         border: 1px dashed #AAA;
         border-radius: 5px;
         font-family: "Noto Sans",sans-serif;
         margin: 50px auto;
         padding: 14px 0;
-        width: 80%;
-    }
-    #spec li {
-        display: inline-block;
-        text-align: center;
-        width: 33%;
-    }
-    #spec img {
-        display: block;
-        margin: auto;
-    }
-    #spec span{
-        display: inline-block;
-        padding: 0 4px;
-    }
-    #spec li span:last-of-type{
-        opacity: .5;
+        width: 85%;
     }
     #result {
         border: 1px dashed #AAA;
@@ -84,20 +47,28 @@ tags: [Web-Development, CSS, HTML]
         display: table;
         margin: 45px auto;
         padding: 14px 0;
-        width: 80%;
+        width: 85%;
+    }
+    #spec li {
+        display: inline-block;
+        text-align: center;
+        width: 33%;
     }
     #result li {
         display: table-cell;
         text-align: center;
     }
+    #spec img,
     #result img {
         display: block;
         margin: auto;
     }
+    #spec span,
     #result span{
         display: inline-block;
         padding: 0 4px;
     }
+    #spec li span:last-of-type,
     #result li span:last-of-type{
         opacity: .5;
     }
@@ -125,7 +96,7 @@ Think for a second how you would structure the design above. Among the first thi
 
 Stop. Don't do it. Take a deep breath and think about that colleague (the one you like) or even your future self, you want to be kind to them right? Then don't make things complicated when they don't need to be.
 
-The worst CSS, is the one you don't have to write, and this includes any styles you don't explicitly need to set, like widths in this case.
+The worst CSS you can add, is the one you didn't even need to write. This includes any styles you don't explicitly have to set, like widths in this case.
 
 Products change, new features will be added (or dropped), new trends will change the icons, products will be translated to verbose languages, and please don't forget about A/B testing. This is why the fewer constraints we have in the layout, the easier will be to embrace changes.
 
@@ -664,7 +635,7 @@ ul {
     display: table;
     margin: auto;
     padding: 14px 0;
-    width: 80%;
+    width: 85%;
 }
 li {
     display: table-cell;
