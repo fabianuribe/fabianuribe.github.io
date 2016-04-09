@@ -280,6 +280,8 @@ a.tag:hover {
 }
 .post .gist {
     margin-top: 40px;
+    font-size: 12px;
+    -webkit-text-size-adjust: none;
 }
 .post .highlight {
     border: 1px solid #ddd;
