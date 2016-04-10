@@ -26,7 +26,7 @@ The Heap  will implement the following basic operations :
 - Search
 - String representation
 
-{% gist fabianuribe/5eeeaf5370d03f66f739 %}
+{% gist fabianuribe/5eeeaf5370d03f66f739 heap.js %}
 
 The complete source code for this data structure's including the unit tests for this implementation are included [here](https://gist.github.com/fabianuribe/5eeeaf5370d03f66f739#file-heap-js).
 

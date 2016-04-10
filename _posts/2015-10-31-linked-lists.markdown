@@ -19,7 +19,7 @@ The linked list will implement the following basic operations :
 - Search
 - String representation
 
-{% gist fabianuribe/cf4f9af85e10521063ed %}
+{% gist fabianuribe/cf4f9af85e10521063ed linked-list.js %}
 
 The complete source code for data structure's including the unit tests for this implementation are included [here](https://gist.github.com/fabianuribe/cf4f9af85e10521063ed#file-linked-list-js).
 
