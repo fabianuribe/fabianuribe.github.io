@@ -9,6 +9,8 @@ module Jekyll
       self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
       self.data['tag'] = tag
       self.data['title'] = "#{tag}"
+      self.data['description'] = "Posts tagged #{tag}"
+      self.data['type'] = "tag-index"
     end
   end
   class TagGenerator < Generator

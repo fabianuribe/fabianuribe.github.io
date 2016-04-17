@@ -3,7 +3,20 @@
 /* Common
 /*
 /*****************************************************************************/
-
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v6/LeFlHvsZjXu2c3ZRgBq9nJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://fonts.gstatic.com/s/notosans/v6/PIbvSEyHEdL91QLOQRnZ1xampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 body {
     background-color: #FFF;
     font-family: cambria, georgia, times, serif;
@@ -103,6 +116,10 @@ a.footer-icon {
     max-width: 570px;
     margin: 0 auto;
 }
+
+#tag h1 {
+    font-size: 60px;
+}
 ul.posts {
     list-style-type: none;
     max-width: 500px;
@@ -111,16 +128,38 @@ ul.posts {
 }
 ul.posts li.post-element {
     line-height: 1.5;
-    margin-bottom: 25px;
+    margin-bottom: 60px;
 }
+.posts article p {
+    color: #6D6D6D;
+    color: #3C3C3C;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    margin: 10px 0;
+}
+.posts article h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+}
+
+.posts article a {
+    font-weight: 200;
+    text-align: left;
+}
+
 time {
     color: #aaa;
     font-size: 14px;
 }
-.post-element a {
+.post-element h1 a {
     display: block;
-    font-size: 23px;
+    font-size: 25px;
     color: #333333;
+    margin-top: 5px;
 }
 .post-element a:hover {
     color: #000;

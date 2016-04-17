@@ -12,15 +12,22 @@ layout: default
         {% for tag in post.tags %}
         {% if tag == page.tag %}
         <li class="post-element">
-            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <nav>
-                <ul class="tags">
-                    {% for tag in post.tags %}
-                    <li><a href="/tag/{{ tag | downcase }}" class="tag">{{ tag | replace:'-',' '}}</a></li>
-                    {% endfor %}
-                </ul>
-            </nav>
+            <article>
+                <header>
+                    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                </header>
+                <p>{{post.description}}</p>
+                <nav>
+                    <ul class="tags">
+                        {% for tag in post.tags %}
+                        <li>
+                            <a href="/tag/{{ tag | downcase }}" class="tag">{{ tag | replace:'-',' '}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </article>
         </li>
         {% endif %}
         {% endfor %}
