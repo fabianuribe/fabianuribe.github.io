@@ -118,7 +118,7 @@ a.footer-icon {
 }
 
 #tag h1 {
-    font-size: 60px;
+    font-size: 50px;
 }
 ul.posts {
     list-style-type: none;
@@ -128,7 +128,7 @@ ul.posts {
 }
 ul.posts li.post-element {
     line-height: 1.5;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 .posts article p {
     color: #6D6D6D;
@@ -217,7 +217,7 @@ footer .avatar {
 @media screen and (max-width: 600px) {
     .header {
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
