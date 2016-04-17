@@ -2,6 +2,7 @@
 layout: post
 title: "Use cover? instead of include?"
 date: 2013-04-04 14:00:00
+description: "A quick look into performance implications of using ruby 'cover?' and 'include?' methods."
 category: blog
 tags: [Ruby, Performance]
 ---

@@ -1,4 +1,6 @@
 name: Fabián Uribe
+url: http://fabianuribe.com
+description: "A thing or two about software development and computer science."
 markdown: kramdown
 highlighter: rouge
 permalink: none

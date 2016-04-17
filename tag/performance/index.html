@@ -2,38 +2,35 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Performance</title>
-    <meta name="viewport" content="initial-scale=1">
-
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>Fabián Uribe Blog | Performance</title>
 
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="canonical" href="http://fabianuribe.com/tag/performance/">
 
-    <!-- Google font -->
-    <style>
-        @font-face {
-            font-family: 'Noto Sans';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v6/LeFlHvsZjXu2c3ZRgBq9nJBw1xU1rKptJj_0jans920.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-        }
-        @font-face {
-            font-family: 'Noto Sans';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://fonts.gstatic.com/s/notosans/v6/PIbvSEyHEdL91QLOQRnZ1xampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-        }
-    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1" />
+    <meta name="author" content="Fabián Uribe" />
+    <meta name="description" content="Posts tagged Performance" />
+    <meta name="robots" content="noodp"/>
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Performance" />
+    <meta property="og:description" content="Posts tagged Performance" />
+    <meta property="og:url" content="http://fabianuribe.com/tag/performance/" />
+    <meta property="og:site_name" content="Fabián Uribe Blog" />
+    <meta property="og:image" content="http://fabianuribe.com/assets/images/fab.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Posts tagged Performance" />
+    <meta name="twitter:title" content="Fabián Uribe Blog | Performance" />
+    <meta name="twitter:site" content="@fabianuribe" />
+    <meta name="twitter:image" content="http://fabianuribe.com/assets/images/fab.png" />
 </head>
 
 <body>
@@ -74,17 +71,26 @@
         
         
         <li class="post-element">
-            <time datetime="2013-04-04">Apr 4, 2013</time>
-            <a href="/blog/ruby-cover.html">Use cover? instead of include?</a>
-            <nav>
-                <ul class="tags">
-                    
-                    <li><a href="/tag/ruby" class="tag">Ruby</a></li>
-                    
-                    <li><a href="/tag/performance" class="tag">Performance</a></li>
-                    
-                </ul>
-            </nav>
+            <article>
+                <header>
+                    <time datetime="2013-04-04">Apr 4, 2013</time>
+                    <h1><a href="/blog/ruby-cover.html">Use cover? instead of include?</a></h1>
+                </header>
+                <p>A quick look into performance implications of using ruby 'cover?' and 'include?' methods.</p>
+                <nav>
+                    <ul class="tags">
+                        
+                        <li>
+                            <a href="/tag/ruby" class="tag">Ruby</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tag/performance" class="tag">Performance</a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </article>
         </li>
         
         
@@ -92,7 +98,7 @@
     </ul>
 </section>
 
-    <footer>
+    <footer id="footer">
         <img class='avatar' width="100" height="100" src="/assets/images/fab.png" alt="Fabián Uribe">
         <p>
             My name is Fabián Uribe,
@@ -103,18 +109,17 @@
         <a class="linkedin-icon footer-icon" href="http://www.linkedin.com/in/fabianuribe" title="linkedin"></a>
     </footer>
     <!-- Google Analytics -->
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-31608509-1']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
+
+    <script>
+        if (document.cookie.indexOf('dnt=1')<0){
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-31608509-1', 'auto');
+            ga('require', 'linkid', 'linkid.js');
+            ga('send', 'pageview');
+        }
     </script>
 </body>
 

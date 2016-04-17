@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Data Structures in Javascript: Linked Lists"
+description: "One of the most basic data structures in computer science, with a simple implementation yielding great time and space complexity for a set of operations."
 date: 2015-11-07 14:00:00
 category: blog
 tags: [Computer-Science, Data-Structures, Javascript]

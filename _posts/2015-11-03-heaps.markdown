@@ -2,11 +2,12 @@
 layout: post
 title: "Data Structures in Javascript: Heaps"
 date: 2015-10-31 14:00:00
+description: "A great example of how the right data structure can dramatically change the performance of an algorithm."
 category: blog
 tags: [Computer-Science, Data-Structures, Javascript]
 ---
 
-The *Heap* is a great example of how the right data structure can dramatically change the performance of an algorithm, for example the sort operation using Heapsort can be achieved in linearithmic time and constant space.
+The *Heap* is a great example of how the right data structure can dramatically change the performance of an algorithm, sorting using Heapsort can be achieved in linearithmic time and constant space.
 
 A *Heap* is a tree-based data structure, it is very efficient executing operations of a priority queue, such as inserts and getting the min/max. A *Heap* can be classified as a *Max Heap* or a *Min Heap*. In order to satisfy the *Heap* property, in a *Max Heap* the value on all the parent nodes should be greater than or equal to its children value. On the other hand in a *Min Heap* the value on all the parent nodes will be less than or equal to its children value.
 
