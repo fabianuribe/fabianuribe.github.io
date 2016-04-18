@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/syntax.css">
+    {% if page.customCSS %}<link rel="stylesheet" href="/css/custom/{{ page.customCSS }}">{% endif %}
+
     <link rel="canonical" href="{{site.url}}{{page.url}}">
 
     <meta charset="utf-8" />
