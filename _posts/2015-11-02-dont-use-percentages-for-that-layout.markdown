@@ -3,6 +3,7 @@ layout: post
 title: "Don't use % for that layout... "
 description: "A tutorial on how to evenly distribute a variable number of elements on a responsive horizontal layout."
 date: 2016-04-03 14:00:00
+dateModified: 2016-04-23 14:00:00
 category: blog
 customCSS: "2015-11-02-dont-use-percentages-for-that-layout.css"
 tags: [Web-Development, CSS, HTML]
