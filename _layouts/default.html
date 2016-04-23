@@ -26,13 +26,54 @@
     <meta property="og:description" content="{% if page.description %}{{ page.description | replace:'-',' ' }}{% elsif page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}" />
     <meta property="og:url" content="{{site.url}}{{page.url}}" />
     <meta property="og:site_name" content="Fabián Uribe Blog" />
-    <meta property="og:image" content="http://fabianuribe.com/assets/images/fab.png" />
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image }}" />
+    {% endif %}
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}" />
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | replace:'-',' ' }}{% elsif page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}" />
     <meta name="twitter:title" content="{% if page.type == 'tag-index' %}Fabián Uribe Blog | {% endif %}{{ page.title | replace:'-',' '}}" />
     <meta name="twitter:site" content="@fabianuribe" />
-    <meta name="twitter:image" content="http://fabianuribe.com/assets/images/fab.png" />
+    {% if page.image %}
+    <meta name="twitter:image" content="{{ page.image }}" />
+    {% endif %}
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "{% if page.schemaType %}{{ page.schemaType }}{% elsif layout.schemaType %}{{ layout.schemaType }}{% else %}WebPage{% endif %}",
+            "about": [{% for tag in page.tags %}"{{ tag | replace:'-',' ' }}"{% if forloop.last == false %},{% endif %}{% endfor %}],
+            "author": {
+                "@type": "Person",
+                "name": "Fabián Uribe",
+                "url": "{{site.url}}"
+            },
+            "dateModified": "{% if page.dateModified %}{{ page.dateModified | date: '%Y-%m-%d' }}{% else %}{{ page.date | date: '%Y-%m-%d' }}{% endif %}",
+            "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+            "description":"{% if page.description %}{{ page.description | replace:'-',' ' }}{% elsif page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}",
+            "headline": "{{ page.title }}",
+            "image" : {
+                "@type": "imageObject",
+                "url": "{% if page.image %}{{ page.image }}{% else %}{{site.url}}/assets/images/blank.jpg{% endif %}",
+                "height": "{% if page.image %}{{ page.imageHeight }}{% else %}0{% endif %}",
+                "width": "{% if page.image %}{{ page.imageWidth }}{% else %}0{% endif %}"
+            },
+            "name": "{{ page.title }}",
+            "mainEntityOfPage": {
+                 "@type": "WebPage",
+                 "@id": "{{site.url}}{{page.url}}"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Fabián Uribe Blog",
+                "url": "{{site.url}}",
+                "logo": {
+                    "@type": "imageObject",
+                    "url": "{{site.url}}/assets/images/fab.png"
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
