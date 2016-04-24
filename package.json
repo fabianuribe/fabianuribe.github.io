@@ -1,0 +1,31 @@
+{
+  "name": "fabianuribe.github.io",
+  "version": "1.0.0",
+  "description": "This is my blog's repository hosted on Github pages. http://fabianuribe.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tag": "grunt tag",
+    "minify": "grunt minify"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-shell": "^1.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabianuribe/fabianuribe.github.io.git"
+  },
+  "keywords": [],
+  "author": "Fabian Uribe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabianuribe/fabianuribe.github.io/issues"
+  },
+  "homepage": "https://github.com/fabianuribe/fabianuribe.github.io#readme"
+}

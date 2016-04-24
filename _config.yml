@@ -1,5 +1,7 @@
 name: Fabián Uribe
 url: http://fabianuribe.com
+css_path: /assets/css/
+images_path: /assets/images/
 description: "A thing or two about software development and computer science."
 markdown: kramdown
 highlighter: rouge
@@ -15,3 +17,4 @@ redcarpet:
     - with_to_data
 gems:
   - jekyll-gist
+exclude: [Gemfile, Gemfile.lock, node_modules, package.json, npm-debug.log, Gruntfile.js, css]
