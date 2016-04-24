@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <!--[if lt IE 9]>
@@ -7,11 +7,10 @@
     <![endif]-->
     <title>{% if page.type == 'tag-index' %}Fabián Uribe Blog | {% endif %}{{ page.title | replace:'-',' '}}</title>
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/syntax.css">
-    {% if page.customCSS %}<link rel="stylesheet" href="/css/custom/{{ page.customCSS }}">{% endif %}
+    <link rel="stylesheet" href="{{ site.css_path }}main.min.css">
+    {% if page.customCSS %}<link rel="stylesheet" href="{{ site.css_path }}{{ page.customCSS }}">{% endif %}
 
-    <link rel="canonical" href="{{site.url}}{{page.url}}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,7 +26,7 @@
     <meta property="og:url" content="{{site.url}}{{page.url}}" />
     <meta property="og:site_name" content="Fabián Uribe Blog" />
     {% if page.image %}
-    <meta property="og:image" content="{{ page.image }}" />
+    <meta property="og:image" content="{{ site.images_path }}{{ page.image }}" />
     {% endif %}
 
     <meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}" />
@@ -35,7 +34,7 @@
     <meta name="twitter:title" content="{% if page.type == 'tag-index' %}Fabián Uribe Blog | {% endif %}{{ page.title | replace:'-',' '}}" />
     <meta name="twitter:site" content="@fabianuribe" />
     {% if page.image %}
-    <meta name="twitter:image" content="{{ page.image }}" />
+    <meta name="twitter:image" content="{{ site.images_path }}{{ page.image }}" />
     {% endif %}
 
     <script type="application/ld+json">
@@ -54,22 +53,22 @@
             "headline": "{{ page.title }}",
             "image" : {
                 "@type": "imageObject",
-                "url": "{% if page.image %}{{ page.image }}{% else %}{{site.url}}/assets/images/blank.jpg{% endif %}",
+                "url": "{% if page.image %}{{ site.images_path }}{{ page.image }}{% else %}{{site.url}}{{ site.images_path }}blank.jpg{% endif %}",
                 "height": "{% if page.image %}{{ page.imageHeight }}{% else %}0{% endif %}",
                 "width": "{% if page.image %}{{ page.imageWidth }}{% else %}0{% endif %}"
             },
-            "name": "{{ page.title }}",
             "mainEntityOfPage": {
                  "@type": "WebPage",
-                 "@id": "{{site.url}}{{page.url}}"
+                 "@id": "{{ site.url }}{{ page.url }}"
             },
+            "name": "{{ page.title }}",
             "publisher": {
                 "@type": "Organization",
                 "name": "Fabián Uribe Blog",
-                "url": "{{site.url}}",
+                "url": "{{ site.url }}",
                 "logo": {
                     "@type": "imageObject",
-                    "url": "{{site.url}}/assets/images/fab.png"
+                    "url": "{{ site.url }}{{ site.images_path }}fab.png"
                 }
             }
         }
@@ -79,7 +78,7 @@
 <body>
     {{ content }}
     <footer id="footer">
-        <img class='avatar' width="100" height="100" src="/assets/images/fab.png" alt="Fabián Uribe">
+        <img class='avatar' width="100" height="100" src="{{ site.images_path }}fab.png" alt="Fabián Uribe">
         <p>
             My name is Fabián Uribe,
             <br /> I'm a software engineer at Yahoo!
@@ -88,8 +87,6 @@
         <a class="github-icon footer-icon" href="http://www.github.com/fabianuribe" title="github"></a>
         <a class="linkedin-icon footer-icon" href="http://www.linkedin.com/in/fabianuribe" title="linkedin"></a>
     </footer>
-    <!-- Google Analytics -->
-
     <script>
         if (document.cookie.indexOf('dnt=1')<0){
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
