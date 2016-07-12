@@ -225,7 +225,7 @@ div {
   display: table;
   width: 100%;
 }
-a {
+span {
   display: table-cell;
 }
 {% endhighlight %}
@@ -306,7 +306,7 @@ a full width hence spacing the elements edge to edge.
 
 <div class="code-type-label">CSS</div>
 {% highlight css %}
-a {
+span {
   display: inline-block
 }
 div {
