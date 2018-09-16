@@ -6,7 +6,7 @@ schemaType: Blog
     <a href="/">fabianuribe.com/</a>
     <span class="blog-category">tag</span>
 </header>
-<section id="tag">
+<main id="tag">
     <h1 class="tag_title">{{ page.title | replace:'-',' ' }}</h1>
     <ul class="posts">
         {% for post in site.posts %}
@@ -23,7 +23,9 @@ schemaType: Blog
                     <ul class="tags">
                         {% for tag in post.tags %}
                         <li>
-                            <a href="/tag/{{ tag | downcase }}" class="tag">{{ tag | replace:'-',' '}}</a>
+                            <a href="/tag/{{ tag | downcase }}" class="tag" aria-label="Tagged: {{ tag | replace:'-',' '}}">
+                                {{ tag | replace:'-',' '}}
+                            </a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -34,4 +36,4 @@ schemaType: Blog
         {% endfor %}
         {% endfor %}
     </ul>
-</section>
+</main>

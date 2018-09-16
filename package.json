@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/fabianuribe/fabianuribe.github.io/issues"
   },
-  "homepage": "https://github.com/fabianuribe/fabianuribe.github.io#readme"
+  "homepage": "https://github.com/fabianuribe/fabianuribe.github.io#readme",
+  "dependencies": {
+    "firebase-tools": "^4.2.1"
+  }
 }

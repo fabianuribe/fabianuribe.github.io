@@ -154,7 +154,7 @@ ul.posts li.post-element {
 }
 
 time {
-    color: #aaa;
+    color: #505050;
     font-size: 14px;
 }
 .post-element h1 a {
@@ -176,10 +176,10 @@ time {
 a.tag {
     font-size: 13px;
     display: inline-block;
-    color: #979797;
+    color: #5a5a5a;
     padding: 2px 6px;
     border-radius: 2px;
-    background-color: #F2F2F2;
+    background-color: #f7f7f7;
 }
 a.tag:hover {
     color: #000;
