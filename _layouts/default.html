@@ -7,6 +7,7 @@
     <![endif]-->
     <title>{% if page.type == 'tag-index' %}Fabián Uribe Blog | {% endif %}{{ page.title | replace:'-',' '}}</title>
 
+    <link rel="preload" href="https://fonts.gstatic.com/s/notosans/v6/LeFlHvsZjXu2c3ZRgBq9nJBw1xU1rKptJj_0jans920.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ site.css_path }}main.min.css">
     {% if page.customCSS %}<link rel="stylesheet" href="{{ site.css_path }}{{ page.customCSS }}">{% endif %}
 
