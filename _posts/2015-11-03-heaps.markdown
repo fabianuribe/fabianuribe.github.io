@@ -27,7 +27,229 @@ The Heap  will implement the following basic operations :
 - Search
 - String representation
 
-{% gist fabianuribe/5eeeaf5370d03f66f739 heap.js %}
+<!-- {% gist fabianuribe/5eeeaf5370d03f66f739 heap.js %} -->
+
+<div class="code-type-label">JS</div>
+{% highlight javascript %}
+/**
+ * heap.js
+ * A module that implements a Doubly Linked List data Structure
+ * @module LinkedList
+ */
+module.exports = Heap;
+var TYPE_MIN = 'min';
+var TYPE_MAX = 'max';
+
+/**
+ * Represents a Heap.
+ * @constructor
+ */
+function Heap (array, type, compareFunction) {
+    this.array = array || [];
+    this.type = type === TYPE_MIN ? TYPE_MIN : TYPE_MAX;
+    this.compare = (typeof compareFunction === 'function') ? compareFunction : this.defaultCompareFunction;
+    this.buildHeap();
+}
+
+Heap.prototype = {
+    /**
+     * Arranges the array as a valid heap,
+     * On a 'Max' Heap all the childs should be smaller than their parents
+     * On a 'Min' Heap all the childs should be greater than their parents
+     */
+    buildHeap: function () {
+        var last = this.array.length - 1;
+        var middle = Math.floor(last/2);
+        var i;
+        for (i = middle; i >= 0; i -= 1) {
+            this._heapify(i);
+        }
+    },
+
+    /**
+     * Sorts the array 'in place' according to the Heap type,
+     * A 'Max' Heap will be sorted in ascending order.
+     * A 'Min' Heap will be sorted in descending order.
+     */
+    sort: function () {
+        var limit = this._getLastIdx();
+        while (limit > 0) {
+            this._swap(0, limit);
+            limit -= 1;
+            if (limit) {
+                this._heapify(0, limit);
+            }
+        }
+    },
+
+    /**
+     * Adds an element to the Heap maintaing its order.
+     * @param {Object} element
+     */
+    insert: function (element) {
+        this.array.push(element);
+        this._bubbleUp(this._getLastIdx());
+    },
+
+    /**
+     * Removes the first elment of the Heap
+     * @return {Object}
+     */
+    removeTop: function () {
+        var top = this.array[0];
+        this._swap(0, this._getLastIdx());
+        this.array.pop();
+        this._heapify(0);
+        return top;
+    },
+
+    /**
+     * Compares two objects with Javascript's native logic.
+     * @param {Object} a
+     * @param {Object} b
+     * @return {Number}
+     */
+    defaultCompareFunction: function (a, b) {
+        if (a > b) {
+            return 1;
+        }
+        if (b > a) {
+            return -1;
+        }
+        return 0;
+    },
+
+    /**
+     * Makes a valid Heap top down
+     * @private
+     * @param {Number} startIdx
+     * @param {Number} limitIdx
+     */
+    _heapify: function (startIdx, limitIdx) {
+        limitIdx = limitIdx || this._getLastIdx();
+        var topIdx = startIdx;
+        var top = this.array[topIdx];
+        var leftIdx = this._getLeftChild(startIdx, limitIdx);
+        var rightIdx = this._getRightChild(startIdx, limitIdx);
+        var left = leftIdx && this.array[leftIdx];
+        var right = rightIdx && this.array[rightIdx];
+
+        if (startIdx > limitIdx) {
+            return;
+        }
+
+        if (left &&
+            ((this.type === TYPE_MIN &&
+             this.compare(left, top) < 0) ||
+            (this.type === TYPE_MAX &&
+             this.compare(left, top) > 0))) {
+            topIdx = leftIdx;
+            top = left;
+        }
+
+        if (right &&
+            ((this.type === TYPE_MIN &&
+             this.compare(right, top) < 0) ||
+            (this.type === TYPE_MAX &&
+             this.compare(right, top) > 0))) {
+            topIdx = rightIdx;
+            top = right;
+        }
+
+        if (startIdx !== topIdx) {
+            this._swap(startIdx, topIdx);
+            this._heapify(topIdx, limitIdx);
+        }
+    },
+
+    /**
+     * Interchanges the elements at two indexes
+     * @private
+     * @param {Object} a
+     * @param {Object} b
+     */
+    _swap: function (a, b) {
+        var temp = this.array[a];
+        this.array[a] = this.array[b];
+        this.array[b] = temp;
+    },
+
+    /**
+     * Maintains the heap property by comparing an elment to it's parent,
+     * swaping it if necessary until finding the correct position where 
+     * the Heap is valid.
+     * @private
+     * @param {Number} index - The elment to bubble up.
+     */
+    _bubbleUp: function(index) {
+        var parentIdx = this._getParent(index);
+        var parent = (parentIdx >= 0) ? this.array[parentIdx] : null;
+        var value = this.array[index];
+
+        if (parent === null) {
+            return;
+        }
+        if ((this.type === TYPE_MIN &&
+             this.compare(value, parent) < 0) ||
+            (this.type === TYPE_MAX &&
+             this.compare(value, parent) > 0)) {
+            this._swap(index, parentIdx);
+            this._bubbleUp(parentIdx);
+        }
+    },
+
+    /**
+     * Returns the left child index of a parent.
+     * @access private
+     * @param {Numer} parent - The parent's index.
+     * @param {Number} limit - Bound until a child's index will be returned.
+     * @return {Number|null}
+     */
+    _getLeftChild: function (parent, limit) {
+        limit = limit || this._getLastIdx();
+        var childIndex = parent * 2 + 1;
+        return (childIndex <= limit) ? childIndex : null;
+    },
+
+    /**
+     * Returns the right child index of a parent.
+     * @access private
+     * @param {Numer} parent - The parent's index.
+     * @param {Number} limit - Bound until a child's index will be returned.
+     * @return {Number|null}
+     */
+    _getRightChild: function (parent, limit) {
+        limit = limit || this._getLastIdx();
+        var childIndex = parent * 2 + 2;
+        return (childIndex <= limit) ? childIndex : null;
+    },
+
+    /**
+     * Returns the parent index of a child.
+     * @access private
+     * @param {Number} index
+     * @return {Number}
+     */
+    _getParent: function (index) {
+        if (index % 2) {
+            // Is left child
+            return (index - 1)/2;
+        }
+        // Is right child
+        return (index/2) - 1;
+    },
+
+    /**
+     * Returns the index of the last element of the Heap.
+     * @access private
+     * @return {Number}
+     */
+    _getLastIdx: function () {
+        var size = this.array.length;
+        return size > 1 ? size - 1 : 0;
+    }
+};
+{% endhighlight %}
 
 The complete source code for this data structure's including the unit tests for this implementation are included [here](https://gist.github.com/fabianuribe/5eeeaf5370d03f66f739#file-heap-js).
 
