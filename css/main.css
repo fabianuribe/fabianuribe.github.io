@@ -263,6 +263,12 @@ footer .avatar {
     font-family: Georgia;
 }
 
+p code {
+    border-radius: 3px;
+    background: #f7f7f7;
+    font-weight: bold;
+}
+
 /* terminal */
 
 .post pre.terminal {

@@ -28,23 +28,31 @@ tags: [Web-Development, CSS, HTML]
     </li>
 </ul>
 
-Think for a second how you would structure the design above. Among the first things you'll notice is that we need to allocate the horizontal real estate evenly between a number of elements, so given that you are reading this, chances are you are all about responsive layouts, and you would probably roll up your sleeves and decide to use the all mighty `display: inline-block` while throwing in some widths using percentage digits, and call it a day.
+Dust off your HTML and CSS and think for a second how you would implement the “weather forecast” card above.
 
-Stop. Don't do it. Take a deep breath and think about that colleague (the one you like) or even your future self, you want to be kind to them right? Then don't make things complicated when they don't need to be.
+Among the first things you’ll notice, is that the horizontal real estate needs to be distributed evenly between a number of elements (three in this case). One naive approach could be to divide the available space by three and hard-code the width of each inlined element, but since we know better and are well aware of the vast diversity of screen dimensions, we could also think of using an all mighty `display: inline-block` while throwing in some widths using percentage digits. But is it good enough?
 
-The worst CSS you can add, is the one you didn't even need to write. This includes any styles you don't explicitly have to set, like widths in this case.
+Products will change, new features will come, some will go, new trends trigger redesigns, products will be translated into other verbose languages, and let's not don’t forget about A/B testing. This is why the fewer constraints we set in a layout, the easier will be to adopt changes and variations.
 
-Products change, new features will be added (or dropped), new trends will change the icons, products will be translated to verbose languages, and please don't forget about A/B testing. This is why the fewer constraints we have in the layout, the easier will be to embrace changes.
+### Case Study
 
-For simplicity sake, our case of study will be composed by just few `span` elements, but the principles will stand for more complex hierarchies.
+We are going to walk through a few different approaches that will make your and your colleague's future life easier when working with these kinds of layouts and we will start by simplifying the concepts by only using bare `<span>` elements, however, the principles will stand for more complex structures with any number of children elements.
 
-Our solution has to satisfy the following requirements:
+<div class="sample sample-b">
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</div>
 
-- The elements should be spread evenly across the available space.
+Our solution must satisfy the following requirements:
+
+- The elements should be distributed evenly across the available space.
 - It should handle a variable number of elements.
 - It should handle variable width for each element.
 
-We will take 4 approaches, sorted descending on browser support:
+We will take 4 approaches, sorted descending on browser compatibility:
 
 - Using a table
 - Using display table
@@ -53,7 +61,7 @@ We will take 4 approaches, sorted descending on browser support:
 
 ### The \<table\> element
 
-Even though some people will laugh at you for using a ```<table>``` element, if absolute cross-browser compatibility is a requirement, this is the way to go.
+Even though some people could laugh at the thought of using ```<table>``` elements in these days, if absolute cross-browser compatibility is a requirement, this is the way to go.
 
 <div class="sample sample-a">
     <table>

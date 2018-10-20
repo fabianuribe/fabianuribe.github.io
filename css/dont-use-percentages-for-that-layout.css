@@ -56,8 +56,8 @@
 }
 #spec,
 #result {
-    border: 1px dashed #AAA;
-    border-radius: 5px;
+    border: 9px solid #333;
+    border-radius: 20px;
     font-family: "Noto Sans",sans-serif;
     margin: 50px auto;
     padding: 14px 0;
