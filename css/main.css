@@ -244,6 +244,12 @@ footer .avatar {
     padding-left: 20px;
     line-height: 2.2;
 }
+
+.post li > ul {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
+
 .post code {
     border: 1px solid #ddd;
     overflow-wrap: break-word;
