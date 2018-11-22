@@ -520,8 +520,8 @@ no CSS changes are required whatsoever.
 <div class="code-type-label">CSS</div>
 {% highlight css %}
 ul {
-    border: 1px dashed #AAA;
-    border-radius: 5px;
+    border: 9px solid #333;
+    border-radius: 20px;
     display: table;
     margin: auto;
     padding: 14px 0;
