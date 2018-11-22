@@ -13,16 +13,67 @@ However, composing the right kind of Pull Requests is essential for your team to
 
 Let's boldly split into two groups the activities on which most of the Software Engineers spend their workday as *individual contributors* at the average Tech Company or Startup:
 
->   - *Coding*
+<style>
+    .diagram ul {
+        display: block;
+        font-style: italic;
+        margin: 20px 0;
+    }
+    .group-heading {
+        font-weight: bold;
+        display: block;
+    }
 
-> *and*
-
->   - *Attending meetings*  
->   - *Replying to email and instant messages*  
->   - *Reviewing Pull Requests*  
->   - *Mentoring or helping a teammate*  
->   - *Dealing with a broken pipeline, bad builds or incidents*  
->   - *Keeping up with the new trends on their field*  
+    @media (min-width: 663px) {
+        .diagram {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 80px;
+        }
+        .diagram ul {
+            position: relative;
+            list-style: none;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .diagram ul.group-a {
+            background: #333;
+            color: #fff;
+            padding: 86px 77px;
+            margin-top: 95px;
+            margin-right: -14px;
+            vertical-align: top;
+        }
+        .diagram ul.group-b {
+            background: rgba(77, 208, 225, .9);
+            padding: 48px 22px;
+            margin: 0;
+            line-height: 52px;
+        }
+        .group-heading {
+            position: absolute;
+            top: -50px;
+            color: #333;
+            width: 100%;
+            left: 0;
+        }
+    }
+</style>
+<div class="diagram">
+    <ul class="group-a">
+        <li class="group-heading">Group a.</li>
+        <li>Coding</li>
+    </ul>
+    <ul class="group-b">
+        <li class="group-heading">Group b.</li>
+        <li>Attending meetings.</li>
+        <li>Mentoring or helping a teammate.</li>
+        <li>Replying to email and instant messages.</li>
+        <li>Dealing with a broken pipeline or incidents.</li>
+        <li>Keeping up with new trends on the field.</li>
+        <li>Reviewing Pull Requests.</li>
+    </ul>
+</div>
 
 It may not seem so natural but, your team could spend a lot less time on the second group of activities by simply producing better Pull Requests.
 
