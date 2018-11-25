@@ -385,6 +385,7 @@ p code {
     padding: 5px 10px;
     border-radius: 3px;
     box-sizing: border-box;
+    -webkit-appearance: none;
 }
 
 .email-subscribe .sub-email input::placeholder {
@@ -404,6 +405,7 @@ p code {
     padding: 6px 8px;
     font-weight: bold;
     cursor: pointer;
+    -webkit-appearance: none;
 }
 
 
