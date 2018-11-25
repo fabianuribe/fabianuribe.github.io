@@ -33,7 +33,7 @@ schemaType: BlogPosting
             <input type="hidden" value="{{ page.title }}" name="SOURCE">
         </div>
         <div class="sub-btn">
-            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" onclick="javascript:ga('send', 'event', {'eventCategory': 'subscribe', 'eventAction': 'submit', 'transport': 'beacon'})">
         </div>
     </form>
 </div>
