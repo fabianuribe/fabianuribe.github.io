@@ -353,6 +353,60 @@ p code {
     }
 }
 
+.email-subscribe {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.email-subscribe .sub-head {
+    font-weight: bold;
+}
+
+.email-subscribe form {
+    display: table;
+    padding: 0px 20px;
+    margin: 15px auto;
+    max-width: 490px;
+}
+
+.email-subscribe form div {
+    display: table-cell;
+}
+
+.email-subscribe .sub-email {
+    width: 100%;
+}
+
+.email-subscribe .sub-email input {
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.email-subscribe .sub-email input::placeholder {
+    color: #666;
+}
+
+.email-subscribe .sub-btn {
+    padding-left: 5px;
+}
+
+.email-subscribe .sub-btn input {
+    font-size: 16px;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #333;
+    border: none;
+    padding: 6px 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
 /*****************************************************************************/
 /*
 /* Browser compatibility

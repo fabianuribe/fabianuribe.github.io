@@ -24,3 +24,16 @@ schemaType: BlogPosting
     </header>
     {{ content }}
 </article>
+<div class="email-subscribe">
+    <div class="sub-head">Read the next one before everyone else</div>
+    <div class="sub-sub">Subscribe to receive new articles in your inbox.</div>
+    <form action="https://fabianuribe.us19.list-manage.com/subscribe/post?u=7a39f93f04bfa59691fbac01f&amp;id=72ae3177ca" method="post" id="subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div class="sub-email">
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required>
+            <input type="hidden" value="{{ page.title }}" name="SOURCE">
+        </div>
+        <div class="sub-btn">
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+    </form>
+</div>
