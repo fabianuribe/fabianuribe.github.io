@@ -20,10 +20,10 @@ module.exports = function(grunt) {
     },
     shell: {
         build: {
-            command: 'jekyll build'
+            command: 'bundle exec jekyll build'
         },
         clean: {
-            command: 'rm -r _site/tag/*'
+            command: 'rm -r _site/tag/'
         }
     }
   });
